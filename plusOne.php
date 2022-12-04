@@ -1,10 +1,11 @@
+<?php
 /*
 https://leetcode.com/problems/plus-one/submissions/
 
-Runtime: 18 ms, faster than 22.90% of PHP online submissions for Plus One.
-Memory Usage: 19.3 MB, less than 24.05% of PHP online submissions for Plus One.
+Runtime: 3 ms, faster than 97.33% of PHP online submissions for Plus One.
+Memory Usage: 19.2 MB, less than 72.14% of PHP online submissions for Plus One.
 */
-<?php
+
 class Solution {
 
     /**
@@ -17,14 +18,12 @@ class Solution {
         $skip = false;
         
         for($index = $lastIndex; $index >= 0; $index--) {
-            $previousIndex = $index - 1;
-            
-            var_dump('index: ' . $index);
-            var_dump($digits[$index]);
-            
             if($skip === true && $digits[$index] < 10) {
                 return $digits;
             }
+            
+            $previousIndex = $index - 1;
+            
             
             if($digits[$index] >= 9) {
                 $digits[$index] = 0;
