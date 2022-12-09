@@ -1,1 +1,1 @@
-# My assignments for LeetCode.com
+# My LeetCode.com assignments
